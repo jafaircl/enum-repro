@@ -1,0 +1,6 @@
+version: v1
+plugins:
+  - plugin: protoc-gen-enumrepro
+    path: ./proto/protoc-gen-enumrepro/run.ts
+    opt: target=ts
+    out: ./__generated__

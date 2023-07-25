@@ -1,0 +1,17 @@
+{
+  "name": "enum-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate": "npx buf generate --template proto/buf.gen.yaml",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@bufbuild/buf": "^1.25.0",
+    "@bufbuild/protoplugin": "^1.3.0",
+    "typescript": "^5.1.6"
+  }
+}
