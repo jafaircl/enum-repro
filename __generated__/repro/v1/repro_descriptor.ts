@@ -3,7 +3,11 @@
 /* eslint-disable */
 // @ts-nocheck
 
+export const MyCustomOption = {
+  name: "MyCustomOption",
+};
 export const MyMessage = {
-  name: MyMessage,
+  name: "MyMessage",
   fieldBehavior: 1,
+  myCustomOption: {"val":"MY_ENUM_SECOND"},
 };

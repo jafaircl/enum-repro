@@ -3,7 +3,24 @@ syntax = "proto3";
 package repro.v1;
 
 import "google/api/field_behavior.proto";
+import "google/protobuf/descriptor.proto";
+
+extend google.protobuf.MessageOptions {
+  optional MyCustomOption message = 999999;
+}
+
+message MyCustomOption {
+  enum MyEnum {
+    MY_ENUM_UNSPECIFIED = 0;
+    MY_ENUM_FIRST = 1;
+    MY_ENUM_SECOND = 2;
+  }
+
+  MyEnum val = 1;
+}
 
 message MyMessage {
+  option (repro.v1.message).val = MY_ENUM_SECOND;
+
   string id = 1 [(google.api.field_behavior) = IMMUTABLE];
 }
